@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    </head>
+
+
+    <body>
+        <form action="http://bienvu.net/script.php" method="GET"id="formulaire_contact">
+            
+            <p>*ces zones sont obligatoires</p>
+            
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <label for="nom">votre nom*:</label><input type="text" name="nom" id="?"><br>
+                <label for="prénom">votre prénom:</label><input type="text" surname="nom" id="?" required><br>
+                
+                <input type="radio" name="sexe" value="homme"> homme
+                <input type="radio" name="sexe" value="femme"> femme 
+                <br>
+
+                
+                <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+            
+                <label for="Adresse">adresse:</label><input type="text" surname="adress" id="?" required><br>
+                <label for="code postal">code postal:</label><input type="text" surname="code postal" id="?" required><br>
+                <label for="ville">ville:</label><input type="text" surname="ville" id="?" required><br>
+
+                <label for="?">Email*:</label><input type="email" name="email"><br>
+
+               </fieldset>
+
+            
+             <br>
+             <fieldset>
+                <legend>Votre demande</legend>
+                <label for="Sujet">sujet*</label>
+                <input type="text" name="sujet1" id="sujet2" list="sujet3">
+                <datalist id="sujet3">
+                    <option value="Mes commandes">
+                    <option value="Question sur un produit">
+                    <option value="Réclamation">
+                    <option value="Autres">
+                </datalist>
+            
+                <br>
+                
+                <label for="Question">Votre question*:</label><textarea></textarea>
+
+                <br>
+
+              
+               
+        </select>   
+
+
+
+        </fieldset>  
+        <br>
+        <input type="checkbox" >
+        <label for="j'accepte">*j'accepte le traitement informatique de ce formulaire</label>
+        <br>
+        <input type="submit" value="Envoyer" >
+        <input type="reset" value="Annuler" >
+        
+        </form>
+
+
+
+
+
+
+
+
+    </body>

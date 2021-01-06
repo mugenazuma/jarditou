@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Jarditou</title>
+</head>
+<body>
+    <p>la qualité depuis 70 ans</p>
+   
+    <ul> 
+        <li><a href="index.html">Accueil</a></li> 
+        
+        <li><a href="tableau.html">Tableau</a></li>
+
+        <li><a href="Contact.html">Contact</a></li>
+
+     </ul>
+
+     <img src="Promotion.jpg" alt="Promotion" title="Promotion" width="1000" height="100">
+     <br>
+     <br>
+     
+
+    
+            <form action="http://bienvu.net/script.php" method="GET" id="formulaire_contact">
+                
+                <p>*ces zones sont obligatoires</p>
+                
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label>Votre nom*: </label><input type="text" name="nom" ><br>
+                    <label> Votre prenom: </label><input type="text" ><br>
+                    <label>sexe*</label>
+                    <input type="radio" name="sexe" value="femme"> Féminin
+                    <input type="radio" name="sexe" value="homme"> Masculin
+                    
+                    <br>
+    
+                    
+                    <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date"><br>
+                
+                    <label> adresse:</label><input type="text" required><br>
+                    <label > Code postal:</label><input type="text"  required><br>
+                    <label>Ville:</label><input type="text" ><br>
+    
+                    <label>Email*:</label><input type="email" name="email"><br>
+    
+                   </fieldset>
+    
+                
+                 <br>
+                 <fieldset>
+                    <legend>Votre demande</legend>
+                    <label>Sujet*</label>
+                    <input type="text" name="sujet1" id="sujet2" list="sujet3">
+                    <datalist id="sujet3">
+                        <option value="Mes commandes">
+                        <option value="Question sur un produit">
+                        <option value="Réclamation">
+                        <option value="Autres">
+                    </datalist>
+                
+                    <br>
+                    
+                    <label>Votre question*:</label><textarea></textarea>
+    
+                    <br>
+    
+                  
+                   
+          
+    
+    
+    
+            </fieldset>  
+            <br>
+            <input type="checkbox" >
+            <label>*j'accepte le traitement informatique de ce formulaire</label>
+            <br>
+            <input type="submit" value="Envoyer" >
+            <input type="reset" value="Annuler" >
+            
+            </form>
+    
+
+    <footer>
+        <hr>
+        
+        <ul>
+        <li><a href="index.html">Mention légales</a></li>
+        <li><a href="index.html">Horaires</a></li>
+        <li><a href="index.html">Plan du site</a></li></ul>
+    </footer>
+</body>
+    </html>
