@@ -76,28 +76,30 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 <body>
     
 
-            <form action="http://bienvu.net/script.php" method="GET" id="formulaire_contact">
+            <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">
                 <div class="form-group">
                 <p>*Ces zones sont obligatoires</p>
                 
                 <fieldset>
                     <legend>Vos coordonnées</legend>
-                    <label>Votre nom*: </label><input type="text" class="form-control" name="nom" placeholder="Veuillez saisir votre nom"><br>
-                    <label> Votre prenom*: </label><input type="text" class="form-control" placeholder="Veuillez saisir votre prenom"><br>
-                    <label> Sexe*: </label><br>
+                    <label>Votre nom*: </label><input type="text" class="form-control" name="nom" placeholder="Veuillez saisir votre nom">
+                    <div id="missnom"></div><br>
+                    <label> Votre prenom*: </label><input type="text" class="form-control" placeholder="Veuillez saisir votre prenom">
+                    <div id="missprenom"></div><br>
+                    <label> Sexe*: </label><div id="misssexe"></div><br>
                     <input type="radio" name="sexe" value="homme"> Masculin
                     <input type="radio" name="sexe" value="femme"> Féminin
                     <input type="radio" name="sexe" value="Neutre"> Neutre
                     <br>
     
                     
-                    <label for="date">Date de naissance*:</label><input type="date" class="form-control" name="ddn" id="date"><br>
+                    <label for="date">Date de naissance*:</label><input type="date" class="form-control" name="ddn" id="date"><div id="missDdn"></div><br>
                 
-                    <label> Adresse:</label><input type="text" class="form-control" required><br>
-                    <label > Code postal*:</label><input type="text" class="form-control" required><br>
-                    <label>Ville:</label><input type="text" class="form-control" ><br>
+                    <label> Adresse:</label><input type="text" class="form-control" ><div id="missadresse"></div><br>
+                    <label > Code postal*:</label><input type="text" class="form-control" ><div id="misscp"></div><br>
+                    <label>Ville:</label><input type="text" class="form-control" ><div id="missville"></div><br>
                     
-                    <label>Email*:</label><input type="email" class="form-control" name="email"><br>
+                    <label>Email*:</label><input type="email" class="form-control" name="email"><div id="missemail"></div><br>
     
                    </fieldset>
     
@@ -105,7 +107,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                  <br>
                  <fieldset>
                     <legend>Votre demande</legend>
-                    <label>Sujet*</label>
+                    <label>Sujet*<div id="misssujet"></div></label>
                     <input type="text" class="form-control" name="sujet1" id="sujet2" list="sujet3" placeholder="Veuillez selectionner un sujet">
                     <datalist id="sujet3">
                         <option value="Mes commandes">
@@ -159,6 +161,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                     </nav>
                 
             </footer>   
+            <script src="exercice 5.formulaire.js"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
