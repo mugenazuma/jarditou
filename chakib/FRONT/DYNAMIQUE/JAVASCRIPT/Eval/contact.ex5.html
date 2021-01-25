@@ -81,25 +81,53 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                 <p>*Ces zones sont obligatoires</p>
                 
                 <fieldset>
+                    
                     <legend>Vos coordonnées</legend>
-                    <label>Votre nom*: </label><input type="text" class="form-control" name="nom" placeholder="Veuillez saisir votre nom">
-                    <div id="missnom"></div><br>
-                    <label> Votre prenom*: </label><input type="text" class="form-control" placeholder="Veuillez saisir votre prenom">
-                    <div id="missprenom"></div><br>
-                    <label> Sexe*: </label><div id="misssexe"></div><br>
-                    <input type="radio" name="sexe" value="homme"> Masculin
-                    <input type="radio" name="sexe" value="femme"> Féminin
-                    <input type="radio" name="sexe" value="Neutre"> Neutre
-                    <br>
+                    <label>Votre nom*: </label><input type="text" class="form-control" id="nom" name="nom" placeholder="Veuillez saisir votre nom">
+                    <div id="erreurName" class="Erreur"></div><br>
+
+                    <label> Votre prenom*: </label><input type="text" class="form-control" id="prenom" name="Prénom" placeholder="Veuillez saisir votre prenom">
+                    <div id="erreurPrenom" class="Erreur"></div><br>
+
+                    <label>Sexe*</label>
+                    <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Féminin">
+                        <label class="form-check-label" id="feminin">Féminin</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Masculin">
+                        <label class="form-check-label" id="masculin">Masculin</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Neutre">
+                        <label class="form-check-label" id="neutre">Neutre</label>
+                    </div>
+                        <div id="erreurSexe" class="Erreur"></div>
+                    </div>
     
-                    
-                    <label for="date">Date de naissance*:</label><input type="date" class="form-control" name="ddn" id="date"><div id="missDdn"></div><br>
-                
-                    <label> Adresse:</label><input type="text" class="form-control" ><div id="missadresse"></div><br>
-                    <label > Code postal*:</label><input type="text" class="form-control" ><div id="misscp"></div><br>
-                    <label>Ville:</label><input type="text" class="form-control" ><div id="missville"></div><br>
-                    
-                    <label>Email*:</label><input type="email" class="form-control" name="email"><div id="missemail"></div><br>
+                    <div class="form-group">      
+                        <label for="name">Date de naissance*</label>
+                        <input type="date" class="form-control" name="birth" id="date">        
+                        <div id="erreurDate" class="Erreur"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code">Code Postal*</label>
+                        <input id="codepostal" type="cp" class="form-control" name="cp" placeholder="Code Postal">
+                        <div id="erreurCP" class="Erreur"></div>
+
+                        <label for="adresse">Adresse</label>
+                        <input type="adresse" class="form-control" name="Adresse" id="adresse" placeholder="Adresse">
+                        <div id="erreurAdr" class="Erreur"></div>
+
+                        <label for="city">Ville</label>
+                        <input id="ville" type="city" class="form-control" name="ville" placeholder="Ville">
+                        <div id="erreurVille" class="Erreur"></div>
+
+                        <label for="courriel">Email*</label>
+                        <input id="mail" type="" class="form-control" name="courriel" placeholder="dave.loper@afpa.fr">
+                        <div id="erreurMail" class="Erreur"></div><br>
     
                    </fieldset>
     
@@ -107,31 +135,32 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                  <br>
                  <fieldset>
                     <legend>Votre demande</legend>
-                    <label>Sujet*<div id="misssujet"></div></label>
-                    <input type="text" class="form-control" name="sujet1" id="sujet2" list="sujet3" placeholder="Veuillez selectionner un sujet">
-                    <datalist id="sujet3">
-                        <option value="Mes commandes">
-                        <option value="Question sur un produit">
-                        <option value="Réclamation">
-                        <option value="Autres">
-                    </datalist>
-                
-                    <br>
-                    
-                    <label>Votre question*:</label><textarea class="form-control"></textarea>
-                    
+                    <label for="sujet">Sujet*</label>
+                    <select class="form-control" name="sujet" id="sujet">
+                        <option value="1">Veuillez séléctionner un sujet</option>
+                        <option value="2">Mes commandes</option>
+                        <option value="3">Question sur un produit</option>
+                        <option value="4">Réclamation</option>
+                        <option value="5">Autres</option>           
+                    </select>
+                    <div id="erreurSujet" class="Erreur"></div> 
+
+                    <label for="question">Votre question*</label>
+                    <div class="input-group" >
+                    <textarea class="form-control" id="question" aria-label="With textarea"></textarea>
+                    </div> 
+                    <div id="erreurQuest" class="Erreur"></div>   
                     <br>
 
-    
-    
-            </fieldset>  
-            <br>
-            <input type="checkbox">
-            <label>*J'accepte le traitement informatique de ce formulaire</label>
-            <br>
-            
-            <input type="submit" class="btn btn-dark" value="Envoyer" >
-            <input type="reset" class="btn btn-dark" value="Annuler" >
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="form-check-input" id="accept">
+                        J'accepte le traitement informatique de ce formulaire.<br>
+                        <div id="erreurAccept" class="Erreur"></div>
+                    </div>
+
+                    <button id="envoie" type="submit" class="btn btn-dark">Envoyer</button>
+                    <button type="reset" class="btn btn-dark">Annuler</button>
+                </div>
             <br>
         </br>
             </form>
