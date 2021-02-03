@@ -53,4 +53,4 @@ else
     TOT3 = TOT2 + 6;
 };
 };
-console.log("Le prix à payer sera de " + TOT3 + "€.");
+alert("Le prix à payer sera de " + TOT3 + "€.");
