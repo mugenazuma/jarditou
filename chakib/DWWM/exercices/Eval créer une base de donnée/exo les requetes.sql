@@ -124,7 +124,6 @@ join orders on ord_id = ode_ord_id
 WHERE year(ord_order_date)=2020
 
 
-
 -- Q19. Quel est le panier moyen ?
 
 
