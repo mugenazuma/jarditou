@@ -85,7 +85,6 @@ WHERE employees1.emp_city = 'Compiègne'
 ORDER BY employees1.emp_lastname ASC
 
 
-
 -- Q11. Quel produit a été vendu avec la remise la plus élevée ? Afficher le montant de la remise, le numéro et le nom du produit, le numéro de commande et de ligne de commande.
 
 SELECT ode_discount,pro_id,pro_name,ode_pro_id
@@ -103,30 +102,26 @@ WHERE cou_name = 'Canada'
 -- Q16. Afficher le détail des commandes de 2020.
 
 SELECT ode_id,ode_unit_price,ode_discount,ode_ord_id,ode_pro_id,ord_order_date
-FROM orders,orders_details
+FROM orders
+JOIN orders_details ON ode_ord_id= ord_id
 WHERE ord_order_date BETWEEN '2020/1/1' AND '2020/12/31'
 ORDER BY ord_order_date DESC
 
 
 -- Q17. Afficher les coordonnées des fournisseurs pour lesquels des commandes ont été passées.
 
-SELECT sup_id,sup_name,sup_address,sup_city
-FROM suppliers,orders,orders_details
-WHERE ord_id,ode_ord_id,pro_sup_id,sup_id,sup_countries_id IN
-               -- sous-requete ici : 
-               (SELECT ode_pro_id FROM orders_details)
-
-
-
-
+SELECT DISTINCT sup_id,sup_name,sup_address,sup_city,sup_phone,sup_mail
+FROM suppliers
+JOIN products ON sup_id= pro_sup_id
+JOIN orders_details ON pro_id= ode_pro_id
 
 
 -- Q18. Quel est le chiffre d'affaires de 2020 ?
 
-
-
-
-
+SELECT sum(ode_unit_price * ode_quantity)
+FROM orders_details
+join orders on ord_id = ode_ord_id
+WHERE year(ord_order_date)=2020
 
 
 
@@ -138,4 +133,7 @@ WHERE ord_id,ode_ord_id,pro_sup_id,sup_id,sup_countries_id IN
 
 
 
--- Q20. Lister le total de chaque commande par total décroissant (Afficher numéro de commande, date, total et nom du client).
+-- Q20. Lister le total de chaque commande par total décroissant (Afficher numéro de commande, date, total et nom du client)
+
+
+
